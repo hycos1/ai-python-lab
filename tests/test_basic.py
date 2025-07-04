@@ -5,8 +5,8 @@ Basic tests for ai-python-lab OpenRouter client
 import pytest
 import os
 from unittest.mock import Mock, patch
-from ai_python_lab import OpenRouterClient, quick_chat, ask_ai
-from ai_python_lab.exceptions import AuthenticationError, APIError
+from ai-python-lab import OpenRouterClient, quick_chat, ask_ai
+from ai-python-lab.exceptions import AuthenticationError, APIError
 
 
 class TestOpenRouterClient:
@@ -60,7 +60,7 @@ class TestOpenRouterClient:
         assert headers["HTTP-Referer"] == "https://example.com"
         assert headers["X-Title"] == "Test Site"
     
-    @patch('ai_python_lab.openrouter_client.OpenAI')
+    @patch('ai-python-lab.openrouter_client.OpenAI')
     def test_simple_chat(self, mock_openai):
         """Test simple_chat method"""
         # Mock the OpenAI client and response
@@ -78,7 +78,7 @@ class TestOpenRouterClient:
         assert response == "Test response"
         mock_client.chat.completions.create.assert_called_once()
     
-    @patch('ai_python_lab.openrouter_client.OpenAI')
+    @patch('ai-python-lab.openrouter_client.OpenAI')
     def test_chat_with_messages(self, mock_openai):
         """Test chat method with message history"""
         mock_client = Mock()
@@ -100,7 +100,7 @@ class TestOpenRouterClient:
 class TestQuickFunctions:
     """Test cases for quick functions"""
     
-    @patch('ai_python_lab.openrouter_client.OpenRouterClient')
+    @patch('ai-python-lab.openrouter_client.OpenRouterClient')
     def test_quick_chat(self, mock_client_class):
         """Test quick_chat function"""
         mock_client = Mock()
@@ -113,7 +113,7 @@ class TestQuickFunctions:
         mock_client_class.assert_called_once_with(api_key="test-key", default_model="openrouter/cypher-alpha:free")
         mock_client.simple_chat.assert_called_once_with("Hello")
     
-    @patch('ai_python_lab.openrouter_client.quick_chat')
+    @patch('ai-python-lab.openrouter_client.quick_chat')
     def test_ask_ai(self, mock_quick_chat):
         """Test ask_ai function"""
         mock_quick_chat.return_value = "Test response"
