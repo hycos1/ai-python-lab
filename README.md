@@ -10,18 +10,10 @@ pip install ai-python-lab
 
 ## Quick Start
 
-### Environment Setup
-
-Set your OpenRouter API key as an environment variable:
-
-```bash
-export OPENROUTER_API_KEY="your-api-key-here"
-```
-
 ### Basic Usage
 
 ```python
-from ai_python_lab import OpenRouterClient
+from ai-python-lab import OpenRouterClient
 
 # Initialize client
 client = OpenRouterClient()
@@ -59,7 +51,7 @@ client = OpenRouterClient(default_model="openai/gpt-4")
 For simple one-off requests:
 
 ```python
-from ai_python_lab import quick_chat, ask_ai
+from ai-python-lab import quick_chat, ask_ai
 
 # Quick chat function
 response = quick_chat("Tell me a joke")
@@ -70,33 +62,14 @@ response = ask_ai("What's the weather like?")
 print(response)
 ```
 
-### Advanced Configuration
-
-```python
-client = OpenRouterClient(
-    api_key="your-api-key",
-    site_url="https://your-site.com",
-    site_name="Your Site Name",
-    default_model="openrouter/cypher-alpha:free"
-)
-
-# Chat with custom parameters
-response = client.chat(
-    messages=[{"role": "user", "content": "Write a poem"}],
-    temperature=0.8,
-    max_tokens=200,
-    top_p=0.9
-)
-```
-
 ### Error Handling
 
 ```python
-from ai_python_lab import OpenRouterClient
-from ai_python_lab.exceptions import AuthenticationError, APIError, RateLimitError
+from ai-python-lab import OpenRouterClient
+from ai-python-lab.exceptions import AuthenticationError, APIError, RateLimitError
 
 try:
-    client = OpenRouterClient(api_key="invalid-key")
+    client = OpenRouterClient()
     response = client.simple_chat("Hello")
 except AuthenticationError as e:
     print(f"Authentication failed: {e}")
@@ -120,18 +93,6 @@ for model in models:
 ### OpenRouterClient
 
 Main client class for interacting with OpenRouter API.
-
-#### Constructor
-
-```python
-OpenRouterClient(
-    api_key: Optional[str] = None,
-    base_url: str = "https://openrouter.ai/api/v1",
-    site_url: Optional[str] = None,
-    site_name: Optional[str] = None,
-    default_model: str = "openrouter/cypher-alpha:free"
-)
-```
 
 #### Methods
 
@@ -167,7 +128,7 @@ OpenRouterClient(
 ### Basic Chat Bot
 
 ```python
-from ai_python_lab import OpenRouterClient
+from ai-python-lab import OpenRouterClient
 
 client = OpenRouterClient()
 
@@ -183,7 +144,7 @@ while True:
 ### Multi-turn Conversation
 
 ```python
-from ai_python_lab import OpenRouterClient
+fromai-python-lab import OpenRouterClient
 
 client = OpenRouterClient()
 conversation = []
@@ -207,7 +168,7 @@ while True:
 ### Using with Different Models
 
 ```python
-from ai_python_lab import OpenRouterClient
+from ai-python-lab import OpenRouterClient
 
 client = OpenRouterClient()
 
