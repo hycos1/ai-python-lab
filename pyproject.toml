@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-python-lab"
+dynamic = ["version"]
+authors = [
+    {name = "n1le.dev", email = "n1le.dev@gmail.com"},
+]
+description = "Simple and easy-to-use Python client for OpenRouter API that provides access to various AI models."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["openrouter", "ai", "gpt", "claude", "anthropic", "openai", "chatbot", "api", "client", "artificial intelligence"]
+dependencies = [
+    "openai>=1.0.0",
+    "requests>=2.25.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/n1le-dev/ai-python-lab"
+Documentation = "https://github.com/n1le-dev/ai-python-lab#readme"
+Repository = "https://github.com/n1le-dev/ai-python-lab"
+"Bug Reports" = "https://github.com/n1le-dev/ai-python-lab/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "ai_python_lab.__version__"}

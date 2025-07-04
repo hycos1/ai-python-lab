@@ -1,3 +1,39 @@
+Metadata-Version: 2.4
+Name: ai-python-lab
+Version: 0.1.0
+Summary: Simple and easy-to-use Python client for OpenRouter API that provides access to various AI models.
+Home-page: https://github.com/n1le-dev/ai-python-lab
+Author: n1le.dev
+Author-email: "n1le.dev" <n1le.dev@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/n1le-dev/ai-python-lab
+Project-URL: Documentation, https://github.com/n1le-dev/ai-python-lab#readme
+Project-URL: Repository, https://github.com/n1le-dev/ai-python-lab
+Project-URL: Bug Reports, https://github.com/n1le-dev/ai-python-lab/issues
+Keywords: openrouter,ai,gpt,claude,anthropic,openai,chatbot,api,client,artificial intelligence
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai>=1.0.0
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
 # AI Python Lab - OpenRouter Client
 
 A simple and easy-to-use Python client for the OpenRouter API that provides access to various AI models.
